@@ -1,0 +1,77 @@
+:root {
+  --white: #fff;
+  --dark: #0e0e10;
+
+  --dark-blue: #2e86c1;
+  --light-blue: #d6eaf8;
+  --light-grey: #f4f6f6;
+}
+
+@mixin text($font, $line: $font, $ls: normal) {
+  font-size: $font;
+  line-height: $line;
+  letter-spacing: $ls;
+}
+
+@mixin wh($width: 0, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+/*
+    PADDING
+*/
+
+@mixin pX($left: 0, $right: $left) {
+  padding-left: $left;
+  padding-right: $right;
+}
+
+@mixin pY($top: 0, $bottom: $top) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+
+/*
+    MARGIN
+*/
+
+@mixin mX($left: 0, $right: $left) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+@mixin mY($top: 0, $bottom: $top) {
+  margin-top: $top;
+  margin-bottom: $bottom;
+}
+
+/*
+    FLEX
+*/
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexSpaceBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*
+    GRID
+*/
+@mixin grid1R($gap: 0) {
+  display: grid;
+  grid-auto-flow: column;
+  gap: $gap;
+}
+@mixin grid1C($gap: 0) {
+  display: grid;
+  grid-auto-flow: row;
+  gap: $gap;
+}

@@ -1,0 +1,209 @@
+.sro {
+  display: none;
+  visibility: hidden;
+} // Screen Reader Only
+
+:where(h1, h2, h3, h4, h5, h6, p) {
+  @include mY(0);
+}
+
+:where(a, button) {
+  cursor: pointer;
+}
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  text-decoration: inherit;
+  vertical-align: inherit;
+}
+
+html {
+  line-height: 1.5;
+  tab-size: 4;
+}
+
+body {
+  margin: 0;
+}
+
+nav :where(ol, ul) {
+  list-style: none;
+  padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+
+iframe {
+  border-style: none;
+}
+
+svg:not([fill]) {
+  fill: currentColor;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
+
+dl :where(dl, ol, ul),
+:where(ol, ul) dl,
+ol :where(ol, ul),
+ul :where(ol, ul) {
+  margin: 0;
+}
+
+hr {
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+// FORMS
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 1px solid grey;
+  color: inherit;
+  font: inherit;
+  letter-spacing: inherit;
+  padding: 8px 12px;
+  margin: 0;
+  outline: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="color"],
+[type="range"] {
+  border-width: 0;
+  padding: 0;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: no-repeat right center / 1em;
+  border-radius: 0;
+  padding-right: 1em;
+}
+
+select:not([multiple]):not([size]) {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='4'%3E%3Cpath d='M4 0h6L7 4'/%3E%3C/svg%3E");
+}
+
+::-ms-expand {
+  display: none;
+}
+
+:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.54);
+}
+::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.54;
+}
+[aria-controls] {
+  cursor: pointer;
+}
+[aria-disabled="true"],
+[disabled] {
+  cursor: not-allowed;
+}
+
+// ASSETS
+
+iframe,
+img,
+input,
+select,
+textarea {
+  height: auto;
+  max-width: 100%;
+}
+
+// FONTS
+
+html {
+  font-family: system-ui, /* macOS 10.11-10.12 */ -apple-system, /* Windows 6+ */ Segoe UI, /* Android 4+ */ Roboto,
+    /* Ubuntu 10.10+ */ Ubuntu, /* Gnome 3+ */ Cantarell, /* KDE Plasma 5+ */ Noto Sans, /* fallback */ sans-serif,
+    /* macOS emoji */ "Apple Color Emoji", /* Windows emoji */ "Segoe UI Emoji", /* Windows emoji */ "Segoe UI Symbol",
+    /* Linux emoji */ "Noto Color Emoji";
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family:
+    /* macOS 10.10+ */ Menlo, /* Windows 6+ */ Consolas, /* Android 4+ */ Roboto Mono,
+    /* Ubuntu 10.10+ */ Ubuntu Monospace, /* KDE Plasma 5+ */ Noto Mono, /* KDE Plasma 4+ */ Oxygen Mono,
+    /* Linux/OpenOffice fallback */ Liberation Mono, /* fallback */ monospace;
+  font-size: 1em;
+}

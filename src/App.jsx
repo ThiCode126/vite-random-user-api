@@ -107,7 +107,7 @@ function App() {
       <div className="credit">
         <h3>
           By{" "}
-          <a href="http://thicode.fr" target="_blank" rel="noopener noreferrer">
+          <a href="http://thicode.tech" target="_blank" rel="noopener noreferrer">
             Thicode
           </a>
         </h3>

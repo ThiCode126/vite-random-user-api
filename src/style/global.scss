@@ -40,7 +40,7 @@ body {
   .user {
     width: 450px;
     margin: 0 auto;
-    @include pY(72px);
+    @include pY(24px);
 
     .card-profil {
       background-color: var(--white);
